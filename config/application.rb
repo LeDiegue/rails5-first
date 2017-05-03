@@ -26,5 +26,8 @@ module First
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    # the contents of the lib directory have to be included when the Rails applciation loads
+    config.autoload_paths << Rails.root.join('lib')
   end
 end
